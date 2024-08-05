@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Flower</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(325deg, #1b1e89, #000000);
+            background-size: 200% 200%;
+            animation: gradient-animation 10s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .rose {
+            width: 200px;
+            height: 300px;
+            position: relative;
+        }
+
+        .flower {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            transform: translate(-50%, -50%);
+        }
+
+        .petal {
+            position: absolute;
+            width: 59px;
+            height: 108px;
+            background-color: red;
+            border-radius: 50% 50% 0 0;
+            transform-origin: bottom center;
+        }
+
+        .petal:nth-child(1) {
+            transform: rotate(0deg);
+        }
+
+        .petal:nth-child(2) {
+            transform: rotate(72deg);
+        }
+
+        .petal:nth-child(3) {
+            transform: rotate(144deg);
+        }
+
+        .petal:nth-child(4) {
+            transform: rotate(216deg);
+        }
+
+        .petal:nth-child(5) {
+            transform: rotate(288deg);
+        }
+
+        .center {
+            position: absolute;
+            top: 178%;
+            left: 51%;
+            width: 20px;
+            height: 20px;
+            background-color: darkred;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .stem {
+            position: absolute;
+            top: calc(72% + 60px);
+            left: 50%;
+            width: 10px;
+            height: 150px;
+            background-color: green;
+            transform: translateX(-50%);
+            z-index: -1;
+            transform: translateX(-50%);
+        }
+
+        .leaf {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            background-color: green;
+            border-radius: 50%;
+        }
+
+        .leaf.left {
+            top: 113%;
+            left: 53px;
+            transform: rotate(-30deg);
+        }
+
+        .leaf.right {
+            top: 109%;
+            right: 53px;
+            transform: rotate(30deg);
+        }
+
+        .info {
+            position: absolute;
+            top: -60px;
+            color: white;
+        }
+
+        .info h5 {
+            font-size: 18px;
+            font-family: monospace;
+        }
+
+        .info p {
+            font-family: monospace;
+        }
+
+        @keyframes rotate-flower {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rose">
+        <div class="info">
+            <h5>To my dearest girl</h5>
+            <p>I send you a flower, <br> I think it should be a rose</p>
+        </div>
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+    </div>
+</body>
+
+</html>
